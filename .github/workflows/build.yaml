@@ -1,4 +1,4 @@
-# Build the site and deploy it to GitHub pages
+# Build the project and deploy it to GitHub pages
 name: Build
 
 on:  # yamllint disable-line rule:truthy
@@ -30,7 +30,7 @@ jobs:
       IS_MAIN: ${{ ((github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && '1') || '0' }}
 
     steps:
-    - name: Checkout repository
+    - name: Check out repository
       uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -42,20 +42,17 @@ jobs:
     - name: List dependencies
       shell: bash
       run: |
-        echo $IS_DEPLOY
-        echo $IS_PROD
-        echo $IS_MAIN
+        echo Deploy: $IS_DEPLOY
+        echo Prod: $IS_PROD
+        echo Main: $IS_MAIN
         pip list
-    - name: Build site
+    - name: Build project
       shell: bash
       run: ./ci/build.sh
-    - name: Postprocess site
-      shell: bash
-      run: nox -s prepare-multiversion
     - name: Deploy to GitHub Pages
       if: env.IS_DEPLOY == '1'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: ./doc/_build/html
-        clean: false  # Don't remove files from other branches
+        folder: _FIXME_BUILD_DIRECTORY
+        clean: true
         dry-run: ${{ (env.IS_STAGING == '1' && 'true') || 'false' }}

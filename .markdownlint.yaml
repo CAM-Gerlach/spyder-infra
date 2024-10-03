@@ -100,6 +100,7 @@ MD044:
   - 'Spyder-API-Docs'
   - 'Spyder-Docs'
   - 'Spyder-Website'
+  - 'Spyder-Infra'
   # Include code blocks
   code_blocks: false
   # Include HTML elements

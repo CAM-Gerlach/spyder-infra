@@ -1,21 +1,21 @@
-# Spyder Documentation
+# Spyder Infra
 
-![Spyder Docs - Documentation for the Scientific Python Development Environment](./doc/_static/images/spyder_readme_banner.png)
+![Banner image with the Spyder wordmark and full name, the Scientific Python Development Environment](spyder_readme_banner.png)
 
-*Copyright (c) 2009- Spyder Doc Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-docs/blob/master/AUTHORS.txt))*
+*Copyright (c) 2009- Spyder-Infra Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-infra/blob/_FIXME_MAIN_BRANCH/AUTHORS.txt))*
 
 
 [![License](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
-[![Build](https://github.com/spyder-ide/spyder-docs/actions/workflows/build.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/build.yaml)
-[![Check](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml)
-[![Lint](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
+[![Build](https://github.com/spyder-ide/spyder-infra/actions/workflows/build.yaml/badge.svg)](https://github.com/spyder-ide/spyder-infra/actions/workflows/build.yaml)
+[![Check](https://github.com/spyder-ide/spyder-infra/actions/workflows/check.yaml/badge.svg)](https://github.com/spyder-ide/spyder-infra/actions/workflows/check.yaml)
+[![Lint](https://github.com/spyder-ide/spyder-infra/actions/workflows/lint.yaml/badge.svg)](https://github.com/spyder-ide/spyder-infra/actions/workflows/lint.yaml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/_FIXME_NETLIFY_PROJECT_ID/deploy-status)](https://app.netlify.com/sites/spyder-infra-preview/deploys)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Nox](https://img.shields.io/badge/%F0%9F%A6%8A-Nox-D85E00.svg)](https://github.com/wntrblm/nox)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](https://opencollective.com/spyder)
 
 
-![Screenshot of documentation index page](./doc/_static/images/index-docs.gif)
+![Hero screenshot](_FIXME_HERO_IMAGE)
 
 
 <!-- markdownlint-disable -->
@@ -23,9 +23,9 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Overview](#overview)
-- [Building and Deploying](#building-and-deploying)
+- [Building and Running](#building-and-running)
 - [Contributing](#contributing)
-- [More information](#more-information)
+- [More Information](#more-information)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- markdownlint-restore -->
@@ -33,29 +33,33 @@
 
 ## Overview
 
-This repository contains the documentation for Spyder, the Scientific Python Development Environment.
-You can view the live docs for current and past Spyder versions at [docs.spyder-ide.org](https://docs.spyder-ide.org).
+_FIXME_OVERVIEW
 
 For more information about Spyder itself, please see our [website](https://www.spyder-ide.org/) and the [main repo](https://github.com/spyder-ide/spyder).
 
 
-## Building and Deploying
+## Building and Running
 
-The docs are built with [Sphinx](https://www.sphinx-doc.org/) and deployed with GitHub Actions to the [docs.spyder-ide.org](https://docs.spyder-ide.org/) domain.
-[Nox](https://nox.thea.codes/) is used to automate setup, building and numerous other project tasks.
-The ``master`` branch contains the in-development docs for Spyder 5, while the frozen ``4.x`` and ``3.x`` branches retain the docs for Spyder 4 and Spyder 3.
+This project uses [Nox](https://nox.thea.codes/) to help automate setting up an environment, building and running, linting the codebase, and many other development tasks.
+To build it, ensure Nox is installed (via pip, Conda, pipx, etc), and then just run
+
+```shell
+nox -s build
+```
+
+For more details and step by step instructions, see our [Contributing Guide](./CONTRIBUTING.md).
 
 
 ## Contributing
 
-We welcome your contributions of corrections, additions and enhancements to these docs, as they are very much a work in progress, and we appreciate getting our broad community involved wherever possible.
-Its easy to build a local copy in one or two steps with Nox, or you can also just check your changes with our live build previews on PRs.
-Simply submit a PR with your changes and we'll be happy to review it; make sure to read our [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md) in mind to ensure the process of getting your revisions integrated goes smoothly.
+We welcome your contributions of issue reports, fixes and enhancements to Spyder-Infra, as it is by and for the community, and we appreciate others getting involved.
+Its easy to build a local copy in one or two steps with Nox, or you can also just check your changes with our automated CI jobs on PRs.
+Just submit a PR with your changes and we'll be happy to review it; make sure to read our [Contributing Guide](./CONTRIBUTING.md) first to ensure the process of getting your revisions integrated goes smoothly.
 
-Thanks for your interest in Spyder and its documentation, and we appreciate your support of the project!
+Thanks for your interest in Spyder-Infra, and we appreciate your support of the project!
 
 
-## More information
+## More Information
 
 [Main Website](https://www.spyder-ide.org/)
 
@@ -63,11 +67,11 @@ Thanks for your interest in Spyder and its documentation, and we appreciate your
 
 [Spyder GitHub](https://github.com/spyder-ide/spyder)
 
-[Development Wiki](https://github.com/spyder-ide/spyder/wiki/Dev:-Index)
-
-[Google Group](https://groups.google.com/group/spyderlib)
+[Spyder Google Group](https://groups.google.com/group/spyderlib)
 
 [@Spyder_IDE on Twitter](https://twitter.com/spyder_ide)
+
+[@Spyder on Fosstodon](https://fosstodon.org/@Spyder)
 
 [@SpyderIDE on Facebook](https://www.facebook.com/SpyderIDE/)
 

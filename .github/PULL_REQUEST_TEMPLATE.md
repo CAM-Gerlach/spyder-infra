@@ -6,9 +6,9 @@
 
 ## Pull Request Checklist
 
-* [ ] Read and followed this repo's [Contributing Guidelines](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md)
-* [ ] Based your PR on the latest version of the correct branch (master or 4.x)
-* [ ] Checked your writing carefully for correct English spelling, grammar, etc
+* [ ] Read and followed this repo's [Contributing Guidelines](https://github.com/spyder-ide/spyder-infra/blob/_FIXME_MAIN_BRANCH/CONTRIBUTING.md)
+* [ ] Based your PR on the latest version of the correct branch
+* [ ] Checked your code and writing carefully
 * [ ] Described your changes and the motivation for them below
 * [ ] Noted what issue(s) this pull request resolves, creating one if needed
 
@@ -30,5 +30,4 @@
 Fixes #
 
 
-<!--- Thanks for your help making Spyder --->
-<!--- and its documentation better for everyone! --->
+<!--- Thanks for your help making Spyder-Infra better for everyone! --->

@@ -1,4 +1,4 @@
-# Build the docs and run checks on them
+# Build the project and run checks on it
 
 name: Check
 

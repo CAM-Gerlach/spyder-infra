@@ -1,4 +1,4 @@
-"""Common tasks to build, check and publish Spyder-Docs."""
+"""Common tasks to build, check and publish Spyder-Infra."""
 
 # Standard library imports
 import contextlib
@@ -22,7 +22,7 @@ nox.options.sessions = ["build"]
 nox.options.default_venv_backend = "none"
 
 ORG_NAME = "spyder-ide"
-REPO_NAME = "spyder-docs"
+REPO_NAME = "spyder-infra"
 REPO_URL_HTTPS = "https://github.com/{user}/{repo}.git"
 REPO_URL_SSH = "git@github.com:{user}/{repo}.git"
 
@@ -49,6 +49,7 @@ POT_DIR = LOCALE_DIR / "pot"
 PO_LINE_WIDTH = 0
 
 LATEST_VERSION = 5
+DEFAULT_VERSION_NAME = "current"
 BASE_URL = "https://docs.spyder-ide.org"
 
 CONF_PY = SOURCE_DIR / "conf.py"
@@ -486,12 +487,12 @@ def _prepare_multiversion(_session=None):
     )
     safecopy.copy_dir_if_not_existing(
         source_dir=str(LATEST_VERSION),
-        target_dir="current",
+        target_dir=DEFAULT_VERSION_NAME,
         base_path=HTML_BUILD_DIR,
         verbose=True,
     )
     generateredirects.generate_redirects(
-        canonical_dir="current",
+        canonical_dir=DEFAULT_VERSION_NAME,
         base_path=HTML_BUILD_DIR,
         verbose=True,
         base_url=BASE_URL,

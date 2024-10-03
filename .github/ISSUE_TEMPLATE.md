@@ -1,25 +1,31 @@
 # Issue Report
 
-<!--- **PLEASE NOTE:** This is the issue tracker for Spyder's documentation, not problems with the Spyder application itself nor general help with Spyder. For that, please see the main Spyder repo: <https://github.com/spyder-ide/spyder> . --->
+<!--- **PLEASE NOTE:** This is the issue tracker for Spyder-Infra, not problems with the Spyder application itself nor general help with Spyder. For that, please see the main Spyder repo: <https://github.com/spyder-ide/spyder> . --->
 
 <!--- Please make sure you fill out this template completely so we can find and fix your issue. Otherwise, it may be closed. Thanks! --->
+
+## Checklist
+
+<!--- Mark [x] when complete --->
+
+* [ ] Confirmed the issue is about this specific project
+* [ ] Searched this issue tracker to confirm the issue wasn't already reported
+* [ ] Described the issue and what you expect to see instead in detail
 
 
 ## Issue Description
 
-<!--- Describe the issue you've found with the documentation. --->
+<!--- Describe the issue you've found. --->
 
 
 
+### What were you trying to do, and errors or limitations did you experience?
 
-### Where is the relevant portion of the documentation located?
-
-<!--- Identify the word, line, section, or file this change pertains to. --->
-
+<!--- Please be as specific as you can. --->
 
 
 
-### What would you suggest it be replaced with?
+### What did you expect to see instead? How would you suggest resolving this?
 
 <!--- Please be as specific as you can. --->
 
@@ -28,12 +34,8 @@
 
 ### Other information
 
-* Is the problem specific to documentation for a particular version of Spyder?
+* What version(s) are affected?
 
-    * [ ] N/A
-    * [ ] Spyder 5 (``master``)
-    * [ ] Spyder 4 (``4.x``)
-    * [ ] Spyder 3 (``3.x``, frozen)
 
 
 * Are you planning on submitting a GitHub pull request with a suitable change?

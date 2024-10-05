@@ -29,7 +29,6 @@ REPO_URL_HTTPS = "https://github.com/{user}/{repo}.git"
 REPO_URL_SSH = "git@github.com:{user}/{repo}.git"
 
 # Build config
-CANARY_COMMAND = ("sphinx-build", "--version")
 BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
 BUILD_DIR = Path("doc/_build").resolve()
@@ -57,7 +56,9 @@ DEFAULT_VERSION_NAME = "current"
 BASE_URL = "https://docs.spyder-ide.org"
 
 # Other config
+CANARY_COMMAND = ("pre-commit", "--version")
 IGNORE_REVS_FILE = ".git-blame-ignore-revs"
+PRE_COMMIT_VERSION_SPEC = ">=2.10.0,<4"
 
 # Custom config
 SCRIPT_DIR = Path("scripts").resolve()
@@ -197,6 +198,7 @@ def _execute(session):
 def _install(session, *, use_posargs=True):
     """Execute the dependency installation."""
     posargs = session.posargs[1:] if use_posargs else ()
+    session.install(f"pre-commit{PRE_COMMIT_VERSION_SPEC}")
     session.install("-r", "requirements.txt", *posargs)
 
 
@@ -566,10 +568,9 @@ def uninstall_hooks(session):
 
 def _lint(session):
     """Run linting on the project via pre-commit."""
+    posargs = session.posargs[1:]
     extra_options = ["--show-diff-on-failure"] if CI else []
-    session.run(
-        "pre-commit", "run", "--all", *extra_options, *session.posargs[1:]
-    )
+    session.run("pre-commit", "run", "--all-files", *extra_options, *posargs)
 
 
 @nox.session

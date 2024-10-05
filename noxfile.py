@@ -17,48 +17,56 @@ import nox.logger  # pylint: disable=import-error
 
 # --- Global constants --- #
 
+# Nox config
 nox.options.error_on_external_run = True
 nox.options.sessions = ["build"]
 nox.options.default_venv_backend = "none"
 
+# GitHub config
 ORG_NAME = "spyder-ide"
 REPO_NAME = "spyder-infra"
 REPO_URL_HTTPS = "https://github.com/{user}/{repo}.git"
 REPO_URL_SSH = "git@github.com:{user}/{repo}.git"
 
-IGNORE_REVS_FILE = ".git-blame-ignore-revs"
-
+# Build config
 CANARY_COMMAND = ("sphinx-build", "--version")
 BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
 BUILD_DIR = Path("doc/_build").resolve()
 BUILD_OPTIONS = ("-n", "-W", "--keep-going")
 
+# Builder-specific config
+CONF_PY = SOURCE_DIR / "conf.py"
 HTML_BUILDER = "html"
 HTML_BUILD_DIR = BUILD_DIR / HTML_BUILDER
 HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 
+# I18n config
 SOURCE_LANGUAGE = "en"
 TRANSLATION_LANGUAGES = ("es",)
 ALL_LANGUAGES = (SOURCE_LANGUAGE,) + TRANSLATION_LANGUAGES
-
 LOCALE_DIR = SOURCE_DIR / "locales"
 GETTEXT_BUILDER = "gettext"
 GETTEXT_BUILD_DIR = BUILD_DIR / GETTEXT_BUILDER
 POT_DIR = LOCALE_DIR / "pot"
 PO_LINE_WIDTH = 0
 
+# Deploy config
 LATEST_VERSION = 5
 DEFAULT_VERSION_NAME = "current"
 BASE_URL = "https://docs.spyder-ide.org"
 
-CONF_PY = SOURCE_DIR / "conf.py"
-SCRIPT_DIR = Path("scripts").resolve()
+# Other config
+IGNORE_REVS_FILE = ".git-blame-ignore-revs"
 
-CI = "CI" in os.environ
+# Custom config
+SCRIPT_DIR = Path("scripts").resolve()
 
 
 # ---- Helpers ---- #
+
+
+CI = "CI" in os.environ
 
 
 @contextlib.contextmanager

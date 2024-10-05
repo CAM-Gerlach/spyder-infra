@@ -2,7 +2,7 @@
 
 ![Banner image with the Spyder wordmark and full name, the Scientific Python Development Environment](spyder_readme_banner.png)
 
-*Copyright (c) 2009- Spyder-Infra Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-infra/blob/_FIXME_MAIN_BRANCH/AUTHORS.txt))*
+*Copyright (c) _FIXME_COPYRIGHT_START_DATE- Spyder-Infra Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-infra/blob/_FIXME_MAIN_BRANCH/AUTHORS.txt))*
 
 
 [![License](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)

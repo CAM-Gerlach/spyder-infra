@@ -16,14 +16,35 @@
 *.tmp
 *.temp
 
-# OS-specific files
-.DS_Store
-Thumbs.db
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# OSX useful to ignore
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+Thumbs.db
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+.apdisk
+Network Trash Folder
+Temporary Items
 
 # C extensions
 *.so
@@ -95,6 +116,11 @@ docs/_build/
 # PyBuilder
 target/
 
+# Cookiecutter
+output/
+python_boilerplate/
+cookiecutter-pypackage-env/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
@@ -152,8 +178,13 @@ nppBackup/
 # git .orig files
 *.orig
 
-# IDEA project settings
+# IntelliJ IDEA files
+*.iml
+*.ipr
+*.iws
+.idea
 .idea/
+.idea_modules/
 
 # VSCode files
 .vscode/
@@ -163,7 +194,7 @@ nppBackup/
 .swp.*
 *.swp
 
-# PyPi configuration
+# PyPI configuration
 .pypirc
 
 # Other files
